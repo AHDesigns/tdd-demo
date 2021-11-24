@@ -10,7 +10,7 @@ export const App: FC = () => (
     <GlobalStyle />
 
     <Box>
-      <Greeting />
+      <Greeting services={{ getCharacterCount: async () => Promise.resolve(2) }} />
     </Box>
   </ThemeProvider>
 );

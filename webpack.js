@@ -21,7 +21,7 @@ module.exports = (_, options = {}) => ({
           loader: 'babel-loader',
           options: {
             presets: [
-              ['@babel/preset-env'],
+              ['@babel/preset-env', { targets: 'last 2 Chrome versions' }],
               [
                 '@babel/preset-react',
                 {
