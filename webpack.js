@@ -6,7 +6,7 @@ const rootPath = process.cwd();
 
 module.exports = (_, options = {}) => ({
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
     mainFields: ['main', 'module', 'browser'],
   },
   entry: path.resolve(rootPath, 'src', 'index.tsx'),
@@ -15,7 +15,7 @@ module.exports = (_, options = {}) => ({
   module: {
     rules: [
       {
-        test: /\.(js|ts|tsx)$/,
+        test: /\.(js|ts|tsx|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
